@@ -67,6 +67,7 @@ class CreateAppTables extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('users');
         Schema::dropIfExists('items');
         Schema::dropIfExists('item_conditions');
         Schema::dropIfExists('secondary_categories');
