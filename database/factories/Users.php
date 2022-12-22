@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 
-class CustomerFactory extends Factory
+class UsersFactory extends Factory
 {
     /**
      * Define the model's default state.

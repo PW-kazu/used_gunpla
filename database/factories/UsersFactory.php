@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 
-class UserFactory extends Factory
+class UsersFactory extends Factory
 {
     /**
      * Define the model's default state.
