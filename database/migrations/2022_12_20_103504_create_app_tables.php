@@ -13,10 +13,7 @@ class CreateAppTables extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-             $table->id();
-             $table->timestamps();
-        });
+        
         
         Schema::create('primary_categories', function (Blueprint $table) {
              $table->id();
