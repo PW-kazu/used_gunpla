@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\ResetPasswordController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +24,5 @@ Route::prefix('mypage')
      ->namespace('MyPage')
      ->middleware('auth')
      ->group(function () {
-         Route::get('edit-profile', 'ProfileController@showProfileEditForm')->name('mypage.edit-profile');
+         Route::get('edit-profile', 'ProfileControllerclass@showProfileEditForm')->name('mypage.edit-profile');
      });
