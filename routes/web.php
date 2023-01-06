@@ -1,9 +1,12 @@
 <?php
 
+
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,4 +30,5 @@ Route::prefix('mypage')
      ->middleware('auth')
      ->group(function () {
          Route::get('edit-profile', [ProfileController::class,'showProfileEditForm'])->name('mypage.edit-profile');
+         Route::post('edit-profile', [ProfileController::class,'editProfile'])->name('mypage.edit-profile');
      });
