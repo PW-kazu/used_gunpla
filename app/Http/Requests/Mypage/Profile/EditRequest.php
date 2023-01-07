@@ -4,6 +4,7 @@ namespace App\Http\Requests\Mypage\Profile;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class EditRequest extends FormRequest
 {
     /**
@@ -24,6 +25,7 @@ class EditRequest extends FormRequest
     public function rules()
     {
         return [
+            'avatar' => ['file', 'image'],
             'name' => ['required', 'string', 'max:255'],
         ];
     }
