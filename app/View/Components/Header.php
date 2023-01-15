@@ -20,7 +20,7 @@ class Header extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Illuminate\View\View|string
      */
     public function render()
     {

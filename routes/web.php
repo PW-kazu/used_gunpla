@@ -18,13 +18,17 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('top');
+
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::middleware('auth')
+->group(function () {
+    Route::get('sell', SellController::class, 'showSellForm')->name('sell');
+});
+
 Route::prefix('mypage')
      ->namespace('MyPage')
      ->middleware('auth')
