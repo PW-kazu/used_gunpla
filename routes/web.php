@@ -26,7 +26,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')
 ->group(function () {
-    Route::get('sell', SellController::class, 'showSellForm')->name('sell');
+    Route::get('sell', [SellController::class,'showSellForm'])->name('sell');
 });
 
 Route::prefix('mypage')
